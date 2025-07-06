@@ -1,0 +1,27 @@
+{
+  "version": "5",
+  "dialect": "pg",
+  "entries": [
+    {
+      "idx": 0,
+      "version": "5",
+      "when": 1750223141179,
+      "tag": "0000_wet_marvel_boy",
+      "breakpoints": true
+    },
+    {
+      "idx": 1,
+      "version": "5",
+      "when": 1750240088413,
+      "tag": "0001_luxuriant_wendell_rand",
+      "breakpoints": true
+    },
+    {
+      "idx": 2,
+      "version": "5",
+      "when": 1750436555449,
+      "tag": "0002_nice_viper",
+      "breakpoints": true
+    }
+  ]
+}
