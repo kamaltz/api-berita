@@ -88,14 +88,21 @@ npm run build
 npm start
 ```
 
-The API will be available at `http://kamaltz.publicvm.com`
+### Deployment dengan HTTPS
+
+```bash
+chmod +x deploy.sh
+./deploy.sh
+```
+
+The API will be available at `https://kamaltz.fun`
 
 ## 📚 API Documentation
 
 ### Base URL
 
 ```
-http://kamaltz.publicvm.com/api/v1
+https://kamaltz.fun/api/v1
 ```
 
 ### Health Check

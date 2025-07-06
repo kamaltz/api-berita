@@ -14,9 +14,10 @@ dotenv_1.default.config();
 const app = (0, express_1.default)();
 const PORT = process.env.PORT || 3000;
 app.use((0, cors_1.default)({
-    origin: "*",
+    origin: ["https://kamaltz.fun", "https://www.kamaltz.fun"],
     methods: ["GET", "POST", "PUT", "DELETE", "PATCH", "OPTIONS"],
     allowedHeaders: ["Content-Type", "Authorization"],
+    credentials: true
 }));
 app.use((0, helmet_1.default)({
     contentSecurityPolicy: {
@@ -53,9 +54,10 @@ app.use("*", (req, res) => {
     });
 });
 app.listen(PORT, () => {
+    const baseUrl = process.env.BASE_URL || `http://localhost:${PORT}`;
     console.log(`🚀 News API server is running on port ${PORT}`);
-    console.log(`📚 API Documentation: http://localhost:${PORT}/api/v1/health`);
-    console.log(`🌐 Frontend: http://localhost:${PORT}`);
+    console.log(`📚 API Documentation: ${baseUrl}/api/v1/health`);
+    console.log(`🌐 Frontend: ${baseUrl}`);
 });
 exports.default = app;
 //# sourceMappingURL=index.js.map

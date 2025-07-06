@@ -12,9 +12,10 @@ const app = express();
 const PORT = process.env.PORT || 3000;
 
 app.use(cors({
-    origin: "*",
+    origin: ["https://kamaltz.fun", "https://www.kamaltz.fun"],
     methods: ["GET", "POST", "PUT", "DELETE", "PATCH", "OPTIONS"],
     allowedHeaders: ["Content-Type", "Authorization"],
+    credentials: true
 }));
 
 
@@ -69,9 +70,10 @@ app.use("*", (req, res) => {
 });
 
 app.listen(PORT, () => {
+    const baseUrl = process.env.BASE_URL || `http://localhost:${PORT}`;
     console.log(`🚀 News API server is running on port ${PORT}`);
-    console.log(`📚 API Documentation: http://localhost:${PORT}/api/v1/health`);
-    console.log(`🌐 Frontend: http://localhost:${PORT}`);
+    console.log(`📚 API Documentation: ${baseUrl}/api/v1/health`);
+    console.log(`🌐 Frontend: ${baseUrl}`);
 });
 
 export default app;
